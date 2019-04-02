@@ -1,0 +1,16 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "name": "Samsungs All New OneUI",
+        "image": "https://cdn.bulbagarden.net/upload/7/7e/006Charizard.png",
+        "author": "Imraan Meyer"
+      },
+      {
+        "id": 2,
+        "name": "Iphone XS",
+        "image": "https://cdn.bulbagarden.net/upload/7/7e/006Charizard.png",
+        "author": "Imraan Meyer"
+      }
+    ]
+}
