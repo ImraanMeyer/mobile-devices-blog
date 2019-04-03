@@ -5,8 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
-var indexRouter = require('./routes/index');
-var blogsRouter = require('./routes/blogs');
+var routes = [
+    require('./routes/index'),
+    require('./routes/blogs'),
+]
 
 var app = express();
 
@@ -20,8 +22,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/blogs', blogsRouter);
+
+app.use('/', routes[0]);
+app.use('/blogs', routes[1]);
+
+// sign in page
+// contact page optional
+  // id
+  // username
+  // email
+  // 
 
 
 // catch 404 and forward to error handler

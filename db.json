@@ -3,14 +3,27 @@
       {
         "id": 1,
         "name": "Samsungs All New OneUI",
-        "image": "https://cdn.bulbagarden.net/upload/7/7e/006Charizard.png",
-        "author": "Imraan Meyer"
+        "image": "https://boygeniusreport.files.wordpress.com/2019/02/bgr-galaxy-s10-plus-2.jpg?quality=98&strip=all&w=1024",
+        "author": "Imraan Meyer",
+        "date" : "date",
+        "description" : "string"
+        
       },
       {
         "id": 2,
-        "name": "Iphone XS",
-        "image": "https://cdn.bulbagarden.net/upload/7/7e/006Charizard.png",
-        "author": "Imraan Meyer"
+        "name": "Iphone",
+        "image": "",
+        "author": "Imraan Meyer",
+        "date" : "date",
+        "description" : "string"
+      },
+      {
+        "id": 3,
+        "name": "Title three",
+        "image": "",
+        "author": "Imraan Meyer",
+        "date" : "date",
+        "description" : "string"
       }
     ]
 }

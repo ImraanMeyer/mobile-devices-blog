@@ -7,7 +7,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { 
     title: 'Home',
     name: 'Imraan',
-    blogs: bd  
+    blogs: bd  ,
+    header: "4G|Mobile"
   });
 });
 
