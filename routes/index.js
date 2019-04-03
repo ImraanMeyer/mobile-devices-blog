@@ -4,10 +4,10 @@ var bd = require('../db.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { 
+  res.render('welcome', { 
     title: 'Home',
     name: 'Imraan',
-    blogs: bd  ,
+    blogs: bd,
     header: "4G|Mobile"
   });
 });

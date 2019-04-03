@@ -3,18 +3,59 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var mongoose = require('mongoose');
+var flash = require('connect-flash');
+var session = require('express-session');
+var passport = require('passport');
 
 var routes = [
     require('./routes/index'),
     require('./routes/blogs'),
+    require('./routes/users')
 ]
 
 var app = express();
 
+// Passport config
+require('./config/passport')(passport);
+
+// DB Config
+var db = require('./config/keys').MongoURI;
+
+// Connect to Mongo
+mongoose.connect(db, {useNewUrlParser: true})
+  .then(() => console.log('MongoDB Connected...') )
+  .catch(err => console.log(err));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+// Bodyparser 
+app.use(express.urlencoded({ extended: false}));
+
+// Express Session 
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true,
+}));
+
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Connect flash
+app.use(flash());
+
+// Global Vars
+app.use((req, res, next) =>{
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  next();
+  res.locals.error = req.flash('error');
+  next(); 
+})
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -22,9 +63,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 app.use('/', routes[0]);
 app.use('/blogs', routes[1]);
+app.use('/users', routes[2]);
 
 // sign in page
 // contact page optional
@@ -50,5 +91,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app
+const PORT = process.env.PORT || 8080;
 
+app.listen(PORT, console.log(`Server running on port ${PORT}..`));
