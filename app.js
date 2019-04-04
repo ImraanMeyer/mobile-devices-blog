@@ -7,6 +7,7 @@ var mongoose = require('mongoose');
 var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
+var bodyParser= require('body-parser');
 
 
 var routes = [
@@ -17,6 +18,10 @@ var routes = [
 
 var app = express();
 
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Passport config
@@ -36,6 +41,9 @@ app.set('view engine', 'ejs');
 
 // Bodyparser 
 app.use(express.urlencoded({ extended: false}));
+app.use(bodyParser.urlencoded({
+  extended: true
+})); 
 
 // Express Session 
 app.use(session({
@@ -59,11 +67,6 @@ app.use((req, res, next) =>{
   next();
 })
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-
 app.use('/', routes[0]);
 app.use('/blogs', routes[1]);
 app.use('/users', routes[2]);
@@ -81,7 +84,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  // res.render('error');
 });
 
 // Get app to run on port 8080

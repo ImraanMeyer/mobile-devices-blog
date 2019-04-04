@@ -4,29 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Welcome | 4GMobile</title>
+  <title>Welcome to Mobile Daily | Sign in!</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <section class="primary">
+        <section class="intro">
+            <h1> Welcome to Mobile Daily</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, eligendi blanditiis. Nam rem necessitatibus distinctio tempore consequuntur animi quasi nostrum.</p>
+        </section>
 
-    <% include templates/navbar.ejs %>
-
-    <div class="container">
-      <div class="row mt-5">
-        <div class="col-md-6 m-auto">
-          <div class="card card-body text-center">
-            <h1>Welcome!</h1>
-            <p>Create an account or login</p>
-            <a href="/users/register" class="btn btn-primary btn-block mb-2"
-              >Register</a
-            >
-            <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+        <section class="sign">
+          <div class="container">
+            <div class="row mt-5">
+              <div class="col-md-6 m-auto">
+                <div class="card card-body text-center">
+                  <h1>Welcome!</h1>
+                  <p>Create an account or login</p>
+                  <a href="/users/register" class="btn btn-primary btn-block mb-2">Register</a>
+                  <a href="/users/login" class="btn btn-secondary btn-block">Login</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+    </section>
+
+    
+
+    
   
 </body>
 </html>
