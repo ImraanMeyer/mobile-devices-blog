@@ -3,6 +3,7 @@ var router = express.Router();
 var bcrypt = require('bcryptjs');
 var passport = require('passport');
 
+
 // User model 
 const User = require('../models/User');
 

@@ -5,9 +5,8 @@
         "name": "Samsungs All New OneUI",
         "image": "https://boygeniusreport.files.wordpress.com/2019/02/bgr-galaxy-s10-plus-2.jpg?quality=98&strip=all&w=1024",
         "author": "Imraan Meyer",
-        "date" : "date",
+        "date" : "today",
         "description" : "string"
-        
       },
       {
         "id": 2,
@@ -24,6 +23,15 @@
         "author": "Imraan Meyer",
         "date" : "date",
         "description" : "string"
+      }
+      
+    ],
+    "users": [
+      {
+        "id": 1,
+        "username": "imo",
+        "email": "imraan.meyer97@gmail.com",
+        "password" : "password"
       }
     ]
 }

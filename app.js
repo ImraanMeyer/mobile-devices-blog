@@ -8,6 +8,7 @@ var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
 
+
 var routes = [
     require('./routes/index'),
     require('./routes/blogs'),
@@ -15,6 +16,8 @@ var routes = [
 ]
 
 var app = express();
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Passport config
 require('./config/passport')(passport);
@@ -52,28 +55,18 @@ app.use(flash());
 app.use((req, res, next) =>{
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
-  next();
   res.locals.error = req.flash('error');
-  next(); 
+  next();
 })
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes[0]);
 app.use('/blogs', routes[1]);
 app.use('/users', routes[2]);
-
-// sign in page
-// contact page optional
-  // id
-  // username
-  // email
-  // 
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -91,6 +84,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// Get app to run on port 8080
 const PORT = process.env.PORT || 8080;
-
 app.listen(PORT, console.log(`Server running on port ${PORT}..`));
