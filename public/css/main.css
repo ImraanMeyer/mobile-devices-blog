@@ -24,13 +24,12 @@ body {
 .menu {
   position: absolute;
   right: 0;
-  margin: 2em;
   font-size: 18px; }
 
 .logo {
   position: absolute;
   left: 0;
-  margin: 2em;
+  margin: 1.2em;
   font-family: 'Poppins';
   text-transform: uppercase;
   font-weight: bolder;
@@ -89,9 +88,9 @@ body {
     outline: dashed 1px #74b09c; }
     .link .in:hover {
       background: none;
-      transition: all .2s;
-      outline: dashed 1px #7493b0;
-      color: #7493b0; }
+      outline: dashed 1.4px #7493b0;
+      color: #7493b0;
+      transition: all .2s; }
 
 .img img {
   width: 440px; }
@@ -136,5 +135,113 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center; }
+
+.links {
+  z-index: 1;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  background-color: #fff;
+  text-align: center;
+  opacity: 0.85;
+  box-shadow: 0 0 7px rgba(128, 128, 128, 0.5);
+  height: 100%;
+  width: 200px;
+  left: 100%;
+  padding-top: 80px;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out; }
+  .links__link {
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: 0.3s ease-in-out;
+    padding: 10px 24px 10px 10px;
+    display: block; }
+  .links li {
+    list-style-type: none;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    width: fit-content;
+    line-height: 2em;
+    text-transform: uppercase;
+    position: relative; }
+    .links li a {
+      color: black;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden; }
+      .links li a:hover {
+        color: #74b09c;
+        transition: all .2s; }
+  .links a::before {
+    content: '';
+    width: 20px;
+    position: absolute;
+    border-bottom: 1px solid black;
+    bottom: 0;
+    right: 70%;
+    transition: .2s all; }
+  .links a:hover::before {
+    right: 0; }
+
+#links-checkbox {
+  z-index: 2;
+  display: block;
+  width: 40px;
+  height: 35px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2; }
+
+.burger__element {
+  display: block;
+  position: absolute !important;
+  top: 20px;
+  right: 12px;
+  background-color: #000;
+  width: 26px;
+  height: 2px;
+  margin: 1.2em;
+  transition: 0.2s ease-in-out;
+  z-index: 1;
+  cursor: pointer; }
+  .burger__element::before, .burger__element::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: #000; }
+  .burger__element::before {
+    top: 10px; }
+  .burger__element::after {
+    top: -10px; }
+
+#links-checkbox:checked ~ .burger__element {
+  transform: rotate(180deg);
+  transition: 0.3s ease-in-out; }
+
+#links-checkbox:checked ~ .burger__element::before {
+  width: 20px;
+  top: 2px;
+  left: -8px;
+  transform: rotate(45deg) translateX(5px);
+  transition: 0.3s ease-in-out; }
+
+#links-checkbox:checked ~ .burger__element::after {
+  width: 20px;
+  top: 2px;
+  left: -12px;
+  -webkit-transform: rotate(-45deg) translateX(-5px);
+  transform: rotate(-45deg) translateX(12px);
+  transition: 0.3s ease-in-out; }
+
+#links-checkbox:checked ~ .links {
+  transform: translateX(-100%); }
 
 /*# sourceMappingURL=main.css.map */

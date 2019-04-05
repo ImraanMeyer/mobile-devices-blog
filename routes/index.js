@@ -18,4 +18,9 @@ router.get('/dashboard', ensureAuthenticated, (req, res) => res.render('dashboar
   name: req.user.name
 }));
 
+/* GET Dashboard/index page */
+router.get('/blogs', ensureAuthenticated, (req, res) => res.render('dashboard', {
+  name: req.user.name
+}));
+
 module.exports = router;

@@ -180,10 +180,11 @@ body {
     }
 }
 
+
 .menu {
     position: absolute;
     right: 0;
-    margin: 2em;
+    // margin: 2em;
     font-size: 18px;
     
 }
@@ -191,7 +192,7 @@ body {
 .logo {
     position: absolute;
     left: 0;
-    margin: 2em;
+    margin: 1.2em;
     font-family: 'Poppins';
     text-transform: uppercase;
     font-weight: bolder;
@@ -260,9 +261,10 @@ body {
         outline: dashed 1px #74b09c;
         &:hover {
             background: none;
-            transition: all .2s; 
-            outline: dashed 1px #7493b0;
+            outline: dashed 1.4px #7493b0;
             color: #7493b0;
+            transition: all .2s; 
+
         }
     }
 }
