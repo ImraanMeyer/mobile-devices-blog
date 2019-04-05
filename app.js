@@ -70,6 +70,7 @@ app.use((req, res, next) =>{
 app.use('/', routes[0]);
 app.use('/blogs', routes[1]);
 app.use('/users', routes[2]);
+// create, contact page ...
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

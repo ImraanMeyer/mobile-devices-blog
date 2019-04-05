@@ -257,16 +257,15 @@ body {
     .in {
         background: none;
         color: #74b09c;
-        outline: solid 1px #74b09c;
+        outline: dashed 1px #74b09c;
         &:hover {
             background: none;
             transition: all .2s; 
-            outline: solid 1px #7493b0;
+            outline: dashed 1px #7493b0;
             color: #7493b0;
         }
     }
 }
-
 
 .img img {
     width: 440px;
@@ -295,13 +294,30 @@ body {
 
 
 // Login Page ---***
-.card.card-body {
-    background: $primary;
+.login-container {
+    background: $secondary;
+    height: 100vh;
+
+    .login-form {
+        position: absolute;
+        width: 440px;
+        top: 46%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+    }
+
+    .mt-5 {
+        margin-top: 0 !important;
+    }
+}
+.card {
+    background: $fof !important;
     font-family: 'Poppins';
     border: none !important;
-    border-radius: none !important;
+    border-radius: none;
 
-    h1 {
+    .text-center {
         text-transform: uppercase;
         letter-spacing: 2px;
         text-align: center;

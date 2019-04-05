@@ -86,11 +86,11 @@ body {
   .link .in {
     background: none;
     color: #74b09c;
-    outline: solid 1px #74b09c; }
+    outline: dashed 1px #74b09c; }
     .link .in:hover {
       background: none;
       transition: all .2s;
-      outline: solid 1px #7493b0;
+      outline: dashed 1px #7493b0;
       color: #7493b0; }
 
 .img img {
@@ -114,12 +114,25 @@ body {
   height: 100vh;
   background: #74b09c; }
 
-.card.card-body {
-  background: #74b09c;
+.login-container {
+  background: #7493b0;
+  height: 100vh; }
+  .login-container .login-form {
+    position: absolute;
+    width: 440px;
+    top: 46%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    text-align: left; }
+  .login-container .mt-5 {
+    margin-top: 0 !important; }
+
+.card {
+  background: #f0f0f0 !important;
   font-family: 'Poppins';
   border: none !important;
-  border-radius: none !important; }
-  .card.card-body h1 {
+  border-radius: none; }
+  .card .text-center {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center; }
