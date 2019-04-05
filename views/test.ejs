@@ -13,9 +13,7 @@
 
 </head>
 <body>
-    <section class="background">
-
-    </section>
+    <section class="background"></section>
 
     <div class="menu">
         <% include templates/navbar.ejs %>
@@ -45,7 +43,24 @@
     </section>
 
     <section class="three-blogs" id="down">
-        
+        <div class="container">
+                <% blogs.posts.forEach(function (item) { %>
+                    <div class="blog-post-index">
+                        <section class="image-container">
+                            <img src="<%= item.image %>">
+                        </section>
+                                               
+                        <h3><%= item.name %></h3>
+                                    
+                        <p class="des"><%= item.description %></p>
+            
+                        <p class="author"><%= item.author %></p>
+            
+                        <p class="date"><%= item.date %></p>
+                    </div>
+                  <% }); %>
+        </div>
+
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

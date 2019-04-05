@@ -11,7 +11,7 @@
       {
         "id": 2,
         "name": "Iphone",
-        "image": "",
+        "image": "https://boygeniusreport.files.wordpress.com/2019/02/bgr-galaxy-s10-plus-2.jpg?quality=98&strip=all&w=1024",
         "author": "Imraan Meyer",
         "date" : "date",
         "description" : "string"
@@ -19,7 +19,7 @@
       {
         "id": 3,
         "name": "Title three",
-        "image": "",
+        "image": "https://boygeniusreport.files.wordpress.com/2019/02/bgr-galaxy-s10-plus-2.jpg?quality=98&strip=all&w=1024",
         "author": "Imraan Meyer",
         "date" : "date",
         "description" : "string"
