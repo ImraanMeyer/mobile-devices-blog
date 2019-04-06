@@ -19,7 +19,7 @@ router.get('/dashboard', ensureAuthenticated, (req, res) => res.render('dashboar
 }));
 
 /* GET Dashboard/index page */
-router.get('/blogs', ensureAuthenticated, (req, res) => res.render('dashboard', {
+router.get('/blogs', ensureAuthenticated, (req, res) => res.render('blogs', {
   name: req.user.name
 }));
 

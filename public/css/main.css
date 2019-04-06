@@ -3,7 +3,8 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-family: 'Poppins'; }
 
 body {
   background: #fff; }
@@ -124,7 +125,7 @@ body {
   right: 0;
   bottom: 0;
   height: 100vh;
-  background: #74b09c; }
+  background: #80A1C1; }
   .three-blogs .container {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -134,58 +135,84 @@ body {
     margin: 10px auto 0; }
     .three-blogs .container .blog-post-index {
       background: #f0f0f0;
+      overflow: hidden;
       box-shadow: 0 0 14px rgba(128, 128, 128, 0.5); }
-      .three-blogs .container .blog-post-index h3 {
-        text-align: center;
-        font-size: 22px;
-        margin: 1em auto;
-        position: relative;
-        z-index: 3; }
       .three-blogs .container .blog-post-index .image-container {
         height: 40%;
-        width: auto; }
+        width: auto;
+        overflow: hidden;
+        position: relative; }
         .three-blogs .container .blog-post-index .image-container img {
+          position: relative;
           height: 100%;
           width: 100%; }
+          .three-blogs .container .blog-post-index .image-container img:hover {
+            transform: scale(1.08);
+            transition: all .2s; }
       .three-blogs .container .blog-post-index p {
         padding: .6em;
         position: relative; }
-      .three-blogs .container .blog-post-index .author {
-        margin-bottom: 0;
-        padding-bottom: 0; }
-      .three-blogs .container .blog-post-index .date {
-        margin: 0; }
+      .three-blogs .container .blog-post-index .blog-content {
+        box-shadow: 0 0 14px rgba(128, 128, 128, 0.5); }
+        .three-blogs .container .blog-post-index .blog-content h3 {
+          text-align: center;
+          font-size: 22px;
+          margin: 1em auto;
+          position: relative;
+          z-index: 3; }
+        .three-blogs .container .blog-post-index .blog-content .des {
+          position: relative;
+          z-index: 2;
+          text-align: left;
+          padding: 1em;
+          background: #dddddd; }
+          .three-blogs .container .blog-post-index .blog-content .des:hover {
+            transform: scale(1.1);
+            transition: all .2s;
+            padding: 1.4em; }
+      .three-blogs .container .blog-post-index .user-details {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        color: rgba(128, 128, 128, 0.5); }
+        .three-blogs .container .blog-post-index .user-details .author {
+          margin-bottom: 0;
+          padding-bottom: 0; }
+        .three-blogs .container .blog-post-index .user-details .date {
+          margin: 0;
+          text-align: right; }
+      .three-blogs .container .blog-post-index:hover {
+        transform: scale(1.8); }
     .three-blogs .container .blog-post-index::before {
       content: '';
       position: absolute;
       width: 60%;
       height: 125px;
-      top: 220px;
+      top: 180px;
       left: 0;
       background: #f0f0f0;
-      transform: skewY(10deg); }
+      transform: skewY(10deg);
+      z-index: 2; }
     .three-blogs .container .blog-post-index::after {
       content: '';
       position: absolute;
       width: 60%;
       height: 125px;
-      top: 220px;
+      top: 180px;
       right: 0;
       background: #f0f0f0;
-      transform: skewY(-10deg); }
+      transform: skewY(-10deg);
+      z-index: 1; }
     .three-blogs .container .blog-post-index:nth-of-type(1),
     .three-blogs .container .blog-post-index:nth-of-type(3) {
-      margin-top: 2em; }
+      margin-top: 3em; }
     .three-blogs .container .blog-post-index:nth-of-type(1) {
-      grid-row: span 2;
       position: absolute;
       width: 350px;
       top: 46%;
-      left: 23%;
+      left: 20%;
       transform: translate(-50%, -50%);
       text-align: left; }
     .three-blogs .container .blog-post-index:nth-of-type(2) {
-      grid-row: span 2;
       position: absolute;
       width: 350px;
       top: 46%;
@@ -193,17 +220,37 @@ body {
       transform: translate(-50%, -50%);
       text-align: left; }
     .three-blogs .container .blog-post-index:nth-of-type(3) {
-      grid-row: span 2;
       position: absolute;
       width: 350px;
       top: 46%;
-      left: 77%;
+      left: 80%;
       transform: translate(-50%, -50%);
       text-align: left; }
+  .three-blogs .up {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 1.2em;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    text-decoration: none !important;
+    color: unset !important; }
+    .three-blogs .up p {
+      text-align: center;
+      transition: all .2s; }
+    .three-blogs .up:hover p {
+      margin-bottom: 2em;
+      transition: all .2s; }
 
 .login-container {
-  background: #7493b0;
-  height: 100vh; }
+  background: url(../images/mock.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .login-container .background {
+    background: #B0BBBFe1 !important; }
   .login-container .login-form {
     position: absolute;
     width: 440px;
@@ -211,18 +258,105 @@ body {
     left: 28%;
     transform: translate(-50%, -50%);
     text-align: left; }
+    .login-container .login-form h1 {
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .login-container .login-form input {
+      background: none;
+      border: none;
+      border-bottom: solid 1px black;
+      border-radius: 0;
+      outline: none; }
+      .login-container .login-form input:focus {
+        box-shadow: none; }
+    .login-container .login-form .btn-primary {
+      background: #74b09c;
+      border: none;
+      border-radius: 0;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: .6em; }
+      .login-container .login-form .btn-primary:active, .login-container .login-form .btn-primary:hover, .login-container .login-form .btn-primary:focus {
+        background: #7493b0 !important;
+        box-shadow: none; }
   .login-container .mt-5 {
     margin-top: 0 !important; }
+  .login-container .lead {
+    text-transform: uppercase;
+    font-size: medium; }
+    .login-container .lead a {
+      color: black;
+      text-decoration: underline; }
+      .login-container .lead a:hover {
+        color: #74b09c;
+        text-decoration: none; }
 
 .card {
-  background: #f0f0f0 !important;
+  background: none !important;
   font-family: 'Poppins';
   border: none !important;
-  border-radius: none; }
+  border-radius: 0; }
   .card .text-center {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center; }
+
+.register-container {
+  height: 100vh;
+  background: url(../images/mock.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .register-container .background {
+    background: #B0BBBFe1 !important; }
+  .register-container .reg-form {
+    position: absolute;
+    width: -webkit-fill-available;
+    top: 46%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    text-align: left; }
+    .register-container .reg-form h1 {
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .register-container .reg-form input {
+      background: none;
+      border: none;
+      border-bottom: solid 1px black;
+      border-radius: 0;
+      outline: none; }
+      .register-container .reg-form input:focus {
+        box-shadow: none; }
+    .register-container .reg-form .btn-primary {
+      background: #74b09c;
+      border: none;
+      border-radius: 0;
+      width: fit-content;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: .6em; }
+      .register-container .reg-form .btn-primary:active, .register-container .reg-form .btn-primary:hover, .register-container .reg-form .btn-primary:focus {
+        background: #7493b0 !important;
+        box-shadow: none; }
+    .register-container .reg-form .lead {
+      text-transform: uppercase;
+      font-size: medium; }
+      .register-container .reg-form .lead a {
+        color: black;
+        text-decoration: underline; }
+        .register-container .reg-form .lead a:hover {
+          color: #74b09c;
+          text-decoration: none; }
+
+.home-arrow {
+  display: inline; }
+  .home-arrow p {
+    display: inline;
+    margin-left: 1em;
+    font-size: 1.4em; }
+  .home-arrow:hover p {
+    margin-top: 1em;
+    transition: all .2s; }
 
 .links {
   z-index: 1;

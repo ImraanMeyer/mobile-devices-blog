@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test Design</title>
+    <title>Flagship Daily | Welcome! Sign In</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
@@ -15,7 +15,7 @@
 <body>
     <section class="background"></section>
 
-    <div class="menu">
+    <div class="menu" id="top">
         <% include templates/navbar.ejs %>
     </div>
 
@@ -50,16 +50,25 @@
                             <img src="<%= item.image %>">
                         </section>
                                                
-                        <h3><%= item.name %></h3>
+                        <section class="blog-content">
+                            <h3><%= item.name %></h3>
                                     
-                        <p class="des"><%= item.description %></p>
-            
-                        <p class="author"><%= item.author %></p>
-            
-                        <p class="date"><%= item.date %></p>
+                            <p class="des">
+                                <%= item.description %>
+                            </p>
+                        </section>
+
+                        <section class="user-details">
+                            <p class="author"><%= item.author %></p>
+                            <p class="date"><%= item.date %></p>
+                        </section>
                     </div>
                   <% }); %>
         </div>
+
+        <a class="up" href="#top">
+            <span><p>↑</p> Top </span> 
+        </a>
 
     </section>
 

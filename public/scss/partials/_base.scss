@@ -94,6 +94,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    font-family: 'Poppins';
 }
 
 body {
@@ -247,7 +248,7 @@ body {
     right: 0;
     bottom: 0;
     height: 100vh;
-    background: #74b09c;
+    background: $airblue;
 
     .container { 
     grid-template-columns: repeat(3, 1fr);
@@ -259,38 +260,79 @@ body {
 
     .blog-post-index {
         background: $fof;
+        overflow: hidden;
         box-shadow: 0 0 14px rgba(128, 128, 128, 0.5);
-        h3 {
-            text-align: center;
-            font-size: 22px;
-            margin: 1em auto;
-            position: relative;
-            z-index: 3;
-        }
+        
         .image-container {
             height: 40%;
             width: auto;
+            overflow: hidden;
+            position: relative;
             
-            // position: relative;
             img {
+                position: relative;
                 height: 100%;
                 width: 100%;
+                &:hover {
+                    transform: scale(1.08);
+                    transition: all .2s;
+                }
             }
+
         }
         p {
             padding: .6em;
             position: relative;
         }
 
-        .des {
+        .blog-content {
+            box-shadow: 0 0 14px rgba(128, 128, 128, 0.5);
+
+            h3 {
+                text-align: center;
+                font-size: 22px;
+                margin: 1em auto;
+                position: relative;
+                z-index: 3;
+            }
+
+            .des {
+                position: relative;
+                z-index: 2;
+                text-align: left;
+                padding: 1em;
+                background: #dddddd;
+                // box-shadow: 0 0 14px rgba(128, 128, 128, 0.5);
+    
+                &:hover {
+                    transform: scale(1.1);
+                    transition: all .2s;
+                    padding: 1.4em;
+                }
+            }
+        }
+
+        
+        .user-details {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            color: rgba(128, 128, 128, 0.5);
+
+            .author {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+            .date {
+                margin: 0;
+                text-align: right;
+                
+
+            }
+        }
+        
+        &:hover {
+            transform: scale(1.8);
             
-        }
-        .author {
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        .date {
-            margin: 0;
         }
     }
     .blog-post-index::before{
@@ -298,36 +340,36 @@ body {
         position: absolute;
         width: 60%;
         height: 125px;
-        top:  220px;
+        top:  180px;
         left: 0;
         background: $fof;
         transform: skewY(10deg);
+        z-index: 2;
     }
     .blog-post-index::after{
         content: '';
         position: absolute;
         width: 60%;
         height: 125px;
-        top:  220px;
+        top:  180px;
         right: 0;
         background: $fof;
         transform: skewY(-10deg);
+        z-index: 1;
     }
     .blog-post-index:nth-of-type(1), 
     .blog-post-index:nth-of-type(3) {
-        margin-top: 2em;
+        margin-top: 3em;
     }
     .blog-post-index:nth-of-type(1) {
-        grid-row: span 2;
         position: absolute;
         width: 350px;
         top: 46%;
-        left: 23%;
+        left: 20%;
         transform: translate(-50%, -50%);
         text-align: left;
     }
     .blog-post-index:nth-of-type(2) {
-        grid-row: span 2;
         position: absolute;
         width: 350px;
         top: 46%;
@@ -336,47 +378,49 @@ body {
         text-align: left;
     }
     .blog-post-index:nth-of-type(3) {
-        grid-row: span 2;
         position: absolute;
         width: 350px;
         top: 46%;
-        left: 77%;
+        left: 80%;
         transform: translate(-50%, -50%);
         text-align: left;
     } 
 }
+    .up {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin: 1.2em;
+        font-family: 'Poppins';
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 18px;
+        text-decoration: none !important;
+        color: unset !important;
 
-// .img-container::before {
-//     content: '';
-//     position: absolute;
-//     width: 60%;
-//     height: 125px;
-//     bottom: 180px;
-//     left: 0;
-//     background: #9f5c5c;
-//     transform: skewY(10deg);
-//     z-index: 2;
-// }
-// .img-container::after {
-//     content: '';
-//     position: absolute;
-//     width: 60%;
-//     height: 125px;
-//     bottom: 180px;
-//     right: 0;
-//     background: #9f5c5c;
-//     transform: skewY(-10deg);
-//     z-index: 2;
-// }
+        p {
+            text-align: center;
+            transition: all .2s;
+        }
 
-
+        &:hover p {
+            margin-bottom: 2em;
+            transition: all .2s;
+        }
+    }
 }
 
 
 // Login Page ---***
 .login-container {
-    background: $secondary;
+    background: url(../images/mock.jpg);
     height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .background {
+        background: $ashgrey !important;
+    }
 
     .login-form {
         position: absolute;
@@ -385,21 +429,148 @@ body {
         left: 28%;
         transform: translate(-50%, -50%);
         text-align: left;
+
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        input {
+            background: none;
+            border: none;
+            border-bottom: solid 1px black;
+            border-radius: 0;
+            outline: none;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .btn-primary {
+            background: $primary;
+            border: none;
+            border-radius: 0;
+            width: fit-content;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: .6em;
+
+            &:active,
+            &:hover,
+            &:focus {
+                background: $secondary !important;
+                box-shadow: none;
+            }
+        }
     }
 
     .mt-5 {
         margin-top: 0 !important;
     }
+    .lead {
+        text-transform: uppercase;
+        font-size: medium;
+
+        a {
+            color: black;
+            text-decoration: underline;
+            &:hover {
+                color: $primary;
+                text-decoration: none;
+
+            }
+        }
+    }
 }
 .card {
-    background: $fof !important;
+    background: none !important;
     font-family: 'Poppins';
     border: none !important;
-    border-radius: none;
+    border-radius: 0;
 
     .text-center {
         text-transform: uppercase;
         letter-spacing: 2px;
         text-align: center;
+    }
+}
+
+// Register Page
+.register-container {
+    height: 100vh;
+    background: url(../images/mock.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .background {
+        background: $ashgrey !important;
+    }
+    .reg-form {
+        position: absolute;
+        width: -webkit-fill-available;
+        top: 46%;
+        left: 28%;
+        transform: translate(-50%, -50%);
+        text-align: left;
+
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        input {
+            background: none;
+            border: none;
+            border-bottom: solid 1px black;
+            border-radius: 0;
+            outline: none;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .btn-primary {
+            background: $primary;
+            border: none;
+            border-radius: 0;
+            width: fit-content;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: .6em;
+
+            &:active,
+            &:hover,
+            &:focus {
+                background: $secondary !important;
+                box-shadow: none;
+            }
+        }
+        .lead {
+            text-transform: uppercase;
+            font-size: medium;
+    
+            a {
+                color: black;
+                text-decoration: underline;
+                &:hover {
+                    color: $primary;
+                    text-decoration: none;
+    
+                }
+            }
+        }
+    }
+}
+
+// Home page after login ---**
+.home-arrow {
+    display: inline;
+    p {
+        display: inline;
+        margin-left: 1em;
+        font-size: 1.4em;
+    }
+    &:hover p {
+        margin-top: 1em;
+        transition: all .2s;
+
     }
 }

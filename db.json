@@ -3,28 +3,27 @@
       {
         "id": 1,
         "name": "Samsungs All New OneUI",
-        "image": "https://boygeniusreport.files.wordpress.com/2019/02/bgr-galaxy-s10-plus-2.jpg?quality=98&strip=all&w=1024",
+        "image": "https://androidresult.com/wp-content/uploads/2019/02/one-ui_kv_pc.jpg",
         "author": "Imraan Meyer",
-        "date" : "today",
-        "description" : "string"
+        "date" : "02/04/2019",
+        "description" : "One UI replaces TouchWiz and Samsung Experience as the software layer the brand builds over Android. In this case it’s built upon Android 9 Pie."
       },
       {
         "id": 2,
-        "name": "Iphone",
-        "image": "https://boygeniusreport.files.wordpress.com/2019/02/bgr-galaxy-s10-plus-2.jpg?quality=98&strip=all&w=1024",
+        "name": "Huawei P30 Pro",
+        "image": "https://www.gadgetmatch.com/wp-content/uploads/2019/03/GadgetMatch-20190321-Huawei-P30-Pro-11.jpg",
         "author": "Imraan Meyer",
-        "date" : "date",
-        "description" : "string"
+        "date" : "02/04/2019",
+        "description" : "The P30 Pro is curvy-licious with a curved backside to match its curved display; the P30 has a flat, more traditional panel."
       },
       {
         "id": 3,
-        "name": "Title three",
-        "image": "https://boygeniusreport.files.wordpress.com/2019/02/bgr-galaxy-s10-plus-2.jpg?quality=98&strip=all&w=1024",
+        "name": "Huawei's IFScanner",
+        "image": "https://androidresult.com/wp-content/uploads/2019/04/huawei-p30-pro-hands-on-9-640x640.jpg",
         "author": "Imraan Meyer",
-        "date" : "date",
-        "description" : "string"
+        "date" : "02/04/2019",
+        "description" : "Huawei P30 is the second phone to offer a fingerprint scanner under the screen"
       }
-      
     ],
     "users": [
       {

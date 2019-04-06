@@ -3,15 +3,18 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
 
+<% include templates/navbar %>
+
 
 <section class="login-container">
+    <section class="background"></section>
   <div class="login-form">
     <h1 class="text-center mb-3">Sign In</h1>
     <% include templates/messages %>
     
+    
     <form action="/users/login" method="POST">
       <div class="form-group">
-        <label for="email">Email</label>
         <input
           type="email"
           id="email"
@@ -21,7 +24,6 @@
         />
       </div>
       <div class="form-group">
-        <label for="password">Password</label>
         <input
           type="password"
           id="password"
@@ -37,3 +39,4 @@
     </p>
   </div>
 </section>
+
