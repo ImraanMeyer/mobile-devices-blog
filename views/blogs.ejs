@@ -1,29 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    
-    <link rel='stylesheet' href="css/main.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog Archive</title>
+
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <header class="hero">
 
-      <section class="main-content">
-        <% include templates/navbar_2.ejs %>
-
-        <section class="body-content">
-          <h1>Yo 2  </h1>
+    <section class="container-fluid">
+        <div class="menu" id="top">
+            <% include templates/navbar_2.ejs %>
+        </div>
     
-        </section>
+        <a class="logo home-arrow" href="/users/logout">
+            <span>Sign out<p>→</p></span>
+        </a>
+        
+        <% blogs.posts.forEach(function (item) { %>
+          <section class="full-cover">
+              <div class="blog-post-index">
+              <section class="image-container">
+                      <img src="<%= item.image %>">
+                  </section>
+      
+                  <div class="blog-text">
+                      <section class="blog-content">
+                          <h3><%= item.name %></h3>
+                          <p class="des"><%= item.description %></p>
+                      </section >
+        
+          
+                      <section class="user-details">
+                          <p class="author"><%= item.author %></p>
+          
+                          <p class="date"><%= item.date %></p>   
+                      </section>
+                  </div>
+              </div>
+          </section>
+        <% }); %>
+    </section>
 
-      </section>
 
 
-    </header>
-
-  </body>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+</body>
 </html>

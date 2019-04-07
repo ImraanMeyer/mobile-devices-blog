@@ -9,4 +9,6 @@ router.get('/', function(req, res, next) {
   });
 });
 
+router.get('/', (req, res) => res.render('home', data));
+
 module.exports = router;

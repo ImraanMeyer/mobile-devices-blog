@@ -31,7 +31,7 @@ router.post('/register', (req, res) => {
 
     // Check pass length
     if(password.length < 6) {
-        errors.push({ msg: 'Passwords should be at least 6 characters'});
+        errors.push({ msg: 'Passwords should be at least 6 characters long'});
     }
 
     if(errors.length > 0) {
@@ -85,7 +85,7 @@ router.post('/register', (req, res) => {
 // Login Handle
 router.post('/login', (req, res, next) => {
     passport.authenticate('local', {
-        successRedirect: '/dashboard',
+        successRedirect: '/home',
         failureRedirect: '/users/login',
         failureFlash: true,
     }) (req, res, next);
@@ -94,7 +94,7 @@ router.post('/login', (req, res, next) => {
 // Logout Handle
 router.get('/logout', (req, res) => {
     req.logout();
-    req.flash('success_msg', 'You are logged out');
+    req.flash('success_msg', 'You signed out');
     res.redirect('/users/login')
 })
 

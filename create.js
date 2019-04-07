@@ -25,7 +25,7 @@ router.post('/', function(req, res, next) {
     // getting the date
     newDate = new Date(); 
     // getting date format
-    date = '${newDate.getDate()}/${(newDate.getMonth())}/${(newDate.getFullYear())}';
+    date = `${newDate.getDate()}/${(newDate.getMonth())}/${(newDate.getFullYear())}`;
 
     // Get content
     var content = req.body.content;

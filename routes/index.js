@@ -12,15 +12,12 @@ var data = {
 
 /* GET Welcome page */
 router.get('/', (req, res) => res.render('test', data));
+router.get('/blogs', (req, res) => res.render('blogs', data));
 
 /* GET Dashboard/index page */
-router.get('/dashboard', ensureAuthenticated, (req, res) => res.render('dashboard', {
+router.get('/home', ensureAuthenticated, (req, res) => res.render('home', {
   name: req.user.name
 }));
 
-/* GET Dashboard/index page */
-router.get('/blogs', ensureAuthenticated, (req, res) => res.render('blogs', {
-  name: req.user.name
-}));
 
 module.exports = router;

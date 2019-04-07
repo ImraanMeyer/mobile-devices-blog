@@ -19,8 +19,8 @@
         <% include templates/navbar.ejs %>
     </div>
 
-    <a class="logo" href="#down">
-        <span>Explore <p>↓</p></span>
+    <a class="logo" href="/home">
+        <span>Explore <p>→</p></span>
     </a>
 
     <section class="content">
@@ -29,7 +29,8 @@
         </div>
 
         <section class="desc">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam nostrum mollitia quam perferendis iure! Eos laboriosam minima veritatis illo suscipit?</p>
+            <p>Join our mobile blog community and stay up to date with the latest tech talk trending today!</p>
+            <p>Do the right thing and register, its free.</p>        
         </section>
 
         <section class="link">
@@ -40,36 +41,6 @@
 
     <section class="img">
             <img src="images/oppo.png" alt="">
-    </section>
-
-    <section class="three-blogs" id="down">
-        <div class="container">
-                <% blogs.posts.forEach(function (item) { %>
-                    <div class="blog-post-index">
-                        <section class="image-container">
-                            <img src="<%= item.image %>">
-                        </section>
-                                               
-                        <section class="blog-content">
-                            <h3><%= item.name %></h3>
-                                    
-                            <p class="des">
-                                <%= item.description %>
-                            </p>
-                        </section>
-
-                        <section class="user-details">
-                            <p class="author"><%= item.author %></p>
-                            <p class="date"><%= item.date %></p>
-                        </section>
-                    </div>
-                  <% }); %>
-        </div>
-
-        <a class="up" href="#top">
-            <span><p>↑</p> Top </span> 
-        </a>
-
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
