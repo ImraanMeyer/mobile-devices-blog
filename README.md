@@ -137,4 +137,4 @@ Tools:
 
 ## Contributors
 
-- Imraan Meyer - 2018
+- Imraan Meyer - 2019
