@@ -150,6 +150,9 @@ body {
             transition: all .4s; }
       .container-fluid .full-cover .blog-post-index .blog-text {
         grid-area: content; }
+        .container-fluid .full-cover .blog-post-index .blog-text h3 {
+          text-transform: uppercase;
+          margin-bottom: 2em; }
     .container-fluid .full-cover .blog-post-index:nth-of-type(1) {
       padding-top: 6em; }
 

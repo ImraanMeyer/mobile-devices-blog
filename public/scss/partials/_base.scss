@@ -195,6 +195,10 @@ body {
             }
             .blog-text {
                 grid-area: content;
+                h3 {
+                    text-transform: uppercase;
+                    margin-bottom: 2em;
+                }
             }
         }
         .blog-post-index:nth-of-type(1) {
