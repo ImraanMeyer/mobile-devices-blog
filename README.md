@@ -3,15 +3,15 @@
 
 ## Setting up your workspace
 - Created repository and cloned to desktop
-- Installed nodejs into repo adn started when working
+- Installed nodejs into repo
 
 ```
-    - npm install express-generator -g
-    - express --view=ejs
-    - npm install -g json-server --save
-    - touch db.json
-    - npm install
-    - npm start
+    $ npm install express-generator -g
+    $ express --view=ejs
+    $ npm install -g json-server --save
+    $ touch db.json
+    $ npm install
+    $ npm start
 ```
 - Ran debug code bellow when erros occured
 ```
@@ -21,18 +21,18 @@
 - Using cd to change directory into public folder
 
 ```
-    - mkdir 'scss'
-    - cd 'scss'
-    - touch main.scss
-    - mkdir partials
-    - cd partials
-    - touch 'name of partials.scss'
+    $ mkdir 'scss'
+    $ cd 'scss'
+    $ touch main.scss
+    $ mkdir partials
+    $ cd partials
+    $ touch 'name of partials.scss'
 ```
 
 - Used terminal to watch/write scss:css by writing command:
 
 ```
-    - sass --watch scss:css
+    $ sass --watch scss:css
 
 ```
 - Linked main stylesheet into the head of ejs files
@@ -138,3 +138,4 @@ Tools:
 ## Contributors
 
 - Imraan Meyer - 2019
+- Nate B - 2019
