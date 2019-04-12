@@ -138,4 +138,4 @@ Tools:
 ## Contributors
 
 - Imraan Meyer - 2019
-- Nate B - 2019
+- Nate Banda - 2019
